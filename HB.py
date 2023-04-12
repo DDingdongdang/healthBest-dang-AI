@@ -88,9 +88,10 @@ def re():
 
         # 분류한 음식 이름 출력
         print(pred_value)
+        pred_result = {'food name':pred_value}
 
         # 결과값 json 형식으로 보내줌
-        return jsonify(pred_value),200        
+        return jsonify(pred_result) 
         
 
 
