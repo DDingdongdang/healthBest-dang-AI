@@ -45,7 +45,7 @@ def re():
         #foodName = "None" # 음식 이름
 
         #안드로이드에서 'image'변수에 base64로 변환된 bitmap이미지
-        # one_data = request.form['image'];
+        one_data = request.form['image']
 
         #웹에서 base64로 인코딩된 이미지 정보 가져오기
         _, one_data = request.form['image'].split(',') 
@@ -61,7 +61,10 @@ def re():
         photo = Image.open(io.BytesIO(imgdata))
         if photo is not None :
             foodName = "food"
-        
+
+        print(type(photo)) 
+        photoArray = np.array(photo) # numpy 형식 배열로 만들어줌
+        print(photoArray.shape) # shape를 사용하기 위해서
         
         #이미지 분석관련 코드 작성
         #foodNameData = {"foodName" : foodName}
