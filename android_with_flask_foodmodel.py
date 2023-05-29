@@ -35,7 +35,7 @@ def re():
         one_data = request.form['image']
 
         #웹에서 base64로 인코딩된 이미지 정보 가져오기
-        _, one_data = request.form['image'].split(',') 
+        # _, one_data = request.form['image'].split(',') 
         print("Success to get incoding image from user") # debugging
         print('incoding image:', one_data[:10]) # base64 코드 앞쪽 10자리만 확인
 
